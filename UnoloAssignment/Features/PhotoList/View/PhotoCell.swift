@@ -2,7 +2,7 @@
 //  PhotoCell.swift
 //  UnoloAssignment
 //
-//  Created by Pratibha Rai on 16/06/26.
+//  Created by Hitesh Sapraon 16/06/26.
 //
 
 import UIKit
