@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoDetailViewController" customModule="UnoloAssignment" customModuleProvider="target">
+            <connections>
+                <outlet property="deleteButton" destination="DXh-3J-nM8" id="2P3-HG-pUg"/>
+                <outlet property="photoImageView" destination="KP8-Ee-VEW" id="cDD-cm-0d9"/>
+                <outlet property="saveButton" destination="XpO-Op-6Jw" id="8TC-nf-wCy"/>
+                <outlet property="titleTextField" destination="DSJ-Ap-tVH" id="GnB-9s-wOB"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KP8-Ee-VEW">
+                    <rect key="frame" x="16" y="128" width="361" height="516"/>
+                </imageView>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DSJ-Ap-tVH">
+                    <rect key="frame" x="16" y="654" width="361" height="55"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="oLJ-c3-jnv"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="lPa-Qg-zTi">
+                    <rect key="frame" x="16" y="719" width="361" height="55"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XpO-Op-6Jw">
+                            <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="55"/>
+                            <color key="backgroundColor" systemColor="systemBlueColor"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                            <connections>
+                                <action selector="saveTapped:" destination="-1" eventType="touchUpInside" id="Cem-kK-201"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXh-3J-nM8">
+                            <rect key="frame" x="188.66666666666663" y="0.0" width="172.33333333333337" height="55"/>
+                            <color key="backgroundColor" systemColor="systemRedColor"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Delete"/>
+                            <connections>
+                                <action selector="deleteTapped:" destination="-1" eventType="touchUpInside" id="wbJ-Fo-Mbv"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="1wW-9J-etT"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="KP8-Ee-VEW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="2o1-JQ-62g"/>
+                <constraint firstItem="lPa-Qg-zTi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="HyB-lW-k0e"/>
+                <constraint firstItem="DSJ-Ap-tVH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="LhQ-HL-r5C"/>
+                <constraint firstItem="KP8-Ee-VEW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="RJ7-m0-xAM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="lPa-Qg-zTi" secondAttribute="bottom" constant="10" id="X6V-EI-yfP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DSJ-Ap-tVH" secondAttribute="trailing" constant="16" id="Xqt-ua-afq"/>
+                <constraint firstItem="lPa-Qg-zTi" firstAttribute="top" secondItem="DSJ-Ap-tVH" secondAttribute="bottom" constant="10" id="gAj-aP-WI4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lPa-Qg-zTi" secondAttribute="trailing" constant="16" id="heN-E4-jrB"/>
+                <constraint firstItem="DSJ-Ap-tVH" firstAttribute="top" secondItem="KP8-Ee-VEW" secondAttribute="bottom" constant="10" id="jif-yn-NbO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KP8-Ee-VEW" secondAttribute="trailing" constant="16" id="nnb-aY-rAY"/>
+            </constraints>
+            <point key="canvasLocation" x="-37" y="106"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.53333333333333333" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.2196078431372549" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
